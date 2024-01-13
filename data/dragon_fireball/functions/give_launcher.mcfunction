@@ -1,0 +1,1 @@
+give @s snowball{display:{Name:'{"text":"Fireball Launcher","color":"red","italic":false}'},Artifact:1} 1
