@@ -14,7 +14,14 @@ execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",tag:{display:{Na
 execute as @a[nbt={SelectedItem:{id:"minecraft:echo_shard",tag:{display:{Name:'[{"text":"Ethereal Whisper","italic":false,"color":"red"}]'}}}}] run effect give @s minecraft:mining_fatigue 10
 execute as @a[nbt={SelectedItem:{id:"minecraft:echo_shard",tag:{display:{Name:'[{"text":"Ethereal Whisper","italic":false,"color":"red"}]'}}}}] run effect give @s minecraft:slowness 10
 execute as @a[nbt={SelectedItem:{id:"minecraft:golden_sword",tag:{display:{Name:'[{"text":"The Rouges Dagger","italic":false,"color":"red"}]'}}}}] run effect give @s minecraft:mining_fatigue 10
-
 execute as @a[nbt={SelectedItem:{id:"minecraft:golden_sword",tag:{display:{Name:'[{"text":"The Rouges Dagger","italic":false,"color":"red"}]'}}}}] run effect give @s minecraft:bad_omen 10
 execute as @a[scores={returntosender=1}] run tp @e[type=trident] dragonskyflyer4
-execute as @a[scores={returntosender=1}] run scoreboard players set @s 0
+execute as @a[scores={returntosender=1}] run scoreboard players set @s returntosender 0
+
+execute as @a[nbt={Inventory:[{id:"minecraft:slime_ball",tag:{display:{Name:'[{"text":"Radioactive Treasure","italic":false,"color":"red"}]'}}}]}] run effect give @s minecraft:saturation 10
+execute as @a[nbt={Inventory:[{id:"minecraft:slime_ball",tag:{display:{Name:'[{"text":"Radioactive Treasure","italic":false,"color":"red"}]'}}}]}] run effect give @s minecraft:haste 1 10
+execute as @a[nbt={Inventory:[{id:"minecraft:slime_ball",tag:{display:{Name:'[{"text":"Radioactive Treasure","italic":false,"color":"red"}]'}}}]}] run effect give @s minecraft:invisibility 10
+execute as @a[nbt={Inventory:[{id:"minecraft:slime_ball",tag:{display:{Name:'[{"text":"Radioactive Treasure","italic":false,"color":"red"}]'}}}]}] run scoreboard players add @s radioactive 1
+execute as @a[scores={radioactive=12000}] run effect give @s minecraft:nausea 10
+execute as @a[scores={radioactive=12000}] run effect give @s minecraft:poison 5
+execute as @a[scores={radioactive=24001}] run scoreboard players set @s radioactive 0
